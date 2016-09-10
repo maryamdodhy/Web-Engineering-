@@ -1,0 +1,276 @@
+<html>
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+  <style>
+
+  .jumbotron{
+
+  	max-height: 200px;
+  	margin-bottom: 0;
+  }
+
+  #heading{
+
+  	color: #454545;
+
+  }
+
+  .container-fluid, #footer{
+
+  	background-color: #454545;
+  	color: white;
+  }
+
+  #movie-detail{
+
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
+
+.nav.navbar-nav li a {
+	color: white;
+}
+
+.dropdown-menu li a {
+	background-color: #293D3D;
+}
+
+.dropdown:hover .dropdown-menu {
+display: block;
+}
+
+#img1 , #heading{
+	margin-left: 30px;
+	width: 200px;
+	height: 100px;
+}
+
+#subb{
+
+	margin-left: 290px;
+}
+
+#mov1{
+	width:200px;
+	height:300px;
+	margin-left: 100px;
+}
+
+
+#i1 , #i2, #i3{
+	margin-left: 80px;
+}
+
+#p2{
+	margin-left: 50px;
+}
+
+#p3{
+	margin-left: 90px;
+}
+
+#p4{
+	margin-left: 90px;
+}
+
+#p5{
+margin-left: 90px;
+}
+
+#p6{
+margin-left: 90px;
+}
+
+#i4{
+	margin-left: 100px;
+}
+
+#i5{
+	margin-left: 100px;
+}
+
+#i6{
+	margin-left: 100px;
+}
+
+#news, #high, #events, #quick, #x {
+	text-align: center;
+}
+
+#x1, #x2, #x3, #x4, #x5{
+	color:#001F7D;
+}
+
+#z1, #z2, #z3{
+	width: 30px;
+	height: 30px;
+}
+
+.images{
+	margin-left: 100px;
+}
+  </style>
+
+  <script>
+  
+
+ $(document).ready(function () {
+     $("#subb").click(function(){
+      
+      Movies();
+
+        
+    });
+      });
+   
+  
+  function Movies(){
+        movie= $( "#movie" ).val();
+      
+
+        var url = "http://www.omdbapi.com/?t="+movie+"&y=&plot=short&r=json";
+       $.ajax({url: url, 
+
+        success: function(result){
+          console.log(result);
+          $('#poster').html('<img src="' + result.Poster + '"/>');
+          $('#title').text( result.Title);
+          $('#year').text( result.Year);
+          $('#rat').text( result.imdbRating);
+          
+          $('#director').text( result.Director);
+          $('#actors').text( result.Actors);
+          
+            
+       }
+
+     });
+     }
+	
+  </script>
+
+</head>
+<body>
+
+  <div class="jumbotron">
+  	<div class="row">
+  		<div class="col-md-9">
+  	<img id="img1" src="http://popcorntimeforios.com/wp-content/uploads/2016/02/IMDb-Movies-TV-Logo.png">
+</div>
+<div class="col-md-3">
+	<div class="images">
+		<br><br><br><br>
+<img id="z1" src="http://www.clearview.ca/_/rsrc/1438000770891/home/social-media/twitter_1307050985_2229.png">
+<img id="z2" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/F_icon.svg/2000px-F_icon.svg.png">
+<img id="z3" src="http://www.tomleemusic.com.hk/images/search_button.png">
+</div>
+</div>
+</div>
+  </div>     
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div>
+       <ul class="nav navbar-nav">
+
+       	<li>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp</li>
+        	
+        	<li><a href="#"> <b> About </b> </a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#"> <b>Bookings</b> <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#"> Apply Now </a></li>
+            <li><a href="#"> Postgraduate Admissions </a></li>
+            <li><a href="#"> Undergraduate Admissions </a></li>  
+            <li><a href="#"> International Admissions </a></li>                        
+          </ul>
+        </li>
+
+<li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#"> <b> Movies </b><span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#"> Directory </a></li>
+            <li><a href="#"> Human Resources </a></li>
+            <li><a href="#"> Professional Developement </a></li>  
+            <li><a href="#"> Employment Opportunities </a></li>                        
+          </ul>
+        </li>
+
+
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#"> <b> Showtimes </b><span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#"> Online Alumni Repository </a></li>
+            <li><a href="#"> Request a Transcript </a></li>                       
+          </ul>
+        </li>
+
+
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#"><b> Watch Online </b><span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#"> Family Association </a></li>
+            <li><a href="#"> Parent Guide </a></li>
+            <li><a href="#"> Make a Payment </a></li>                        
+          </ul>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div id="movie-detail" class="container">
+	<div class="row">
+		<div class="col-md-4">
+<form>
+<input class="form-control" id="movie" type="text" placeholder="Movie Name" required> <br>
+<input class="form-control" id="year" type="text" placeholder="Year"><br>
+
+  <input type="button" id="subb" class="btn btn-info" value="Search">
+		</div>
+</form>
+		<div class="col-md-8" id="divi">
+
+<div class="row">
+	<div class="col-md-5">
+	
+	
+    
+<span id="poster"> Poster </span>
+</div>
+
+<div class="col-md-7">
+	<p><b>Title: </b> &nbsp <span id="title"> Title </span> </p>
+	<p><b>Year: </b> &nbsp <span id="year"> 2011 </span> </p>
+		
+		<p><b>IMDb Rating: </b> &nbsp <span id="rat"> Rat </span> </p>
+				<p><b>Director: </b> &nbsp <span id="director"> Director </span> </p>
+					<p><b>Actors: </b> &nbsp <span id="actors"> </span> </p>
+
+	</div>
+		</div>
+	</div>
+	</div>
+	<br>
+		</div>
+
+	<div class="container-fluid">
+
+<div id="footer">
+
+<p id="x"> <b>Copyrights IMDb 2015 </b></p>
+
+</div>
+	</div>
+
+</body>
+
+</html>
